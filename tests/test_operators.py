@@ -8,7 +8,7 @@ from minitorch import MathTest
 import minitorch
 from minitorch.operators import (
     add,
-    addLists,
+    #addLists,
     eq,
     id,
     inv,
@@ -18,8 +18,8 @@ from minitorch.operators import (
     max,
     mul,
     neg,
-    negList,
-    prod,
+    #negList,
+    #prod,
     relu,
     relu_back,
     sigmoid,

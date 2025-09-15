@@ -32,8 +32,76 @@ from typing import Callable, Iterable
 # $f(x) = |x - y| < 1e-2$
 
 
-# TODO: Implement for Task 0.1.
+def mul(x: float, y: float) -> float:
+    return x * y
 
+
+def id(x):
+    return x
+
+
+def add(x: float, y: float) -> float:
+    return x + y
+
+
+def neg(x: float) -> float:
+    return -x
+
+
+def lt(x: float, y: float) -> bool:
+    return x < y
+
+
+def eq(x: float, y: float) -> bool:
+    return x == y
+
+
+def max(x: float, y: float) -> float:
+    if lt(x, y):
+        return y
+    return x
+
+
+def is_close(x: float, y: float) -> bool:
+    return 1e-2 > x - y > -1e-2
+
+
+def exp(x: float) -> float:
+    return math.e ** x
+
+
+def sigmoid(x: float) -> float:
+    if lt(x, 0):
+        return exp(x) / (1 + exp(x))
+    return 1 / (1 + exp(neg(x)))
+
+
+def relu(x: float) -> float:
+    return max(x, 0)
+
+
+def log(x: float) -> float:
+    return math.log(x)
+
+
+def log_back(x: float, y: float):
+    return
+
+
+def inv(x: float) -> float:
+    if x == 0:
+        raise ValueError
+    return 1 / x
+
+
+def inv_back(x: float, y: float):
+    return
+
+
+def relu_back(x: float, y: float):
+    if lt(0, x):
+        return y
+    return 0
 
 # ## Task 0.3
 
